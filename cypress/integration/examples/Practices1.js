@@ -2,7 +2,7 @@
 
 describe('My First Test Suite', function() 
 {
-
+//test git push
 it('My FirstTest case', function() {
 //cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/")
 cy.visit(Cypress.env('url')+"/seleniumPractise/")
