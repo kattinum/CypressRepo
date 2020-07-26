@@ -1,0 +1,104 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-07-26T13:27:56.648Z",
+    "end": "2020-07-26T13:28:45.469Z",
+    "duration": 48821,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e6a2959b-9f29-44b6-bd47-ffc6dcdbf05d",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\TestFramework.js",
+      "file": "cypress\\integration\\examples\\TestFramework.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a2c9f5df-56ae-4d95-86d7-d2d1b91610d7",
+          "title": "My First Test Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "My FirstTest case",
+              "fullTitle": "My First Test Suite My FirstTest case",
+              "timedOut": null,
+              "duration": 29803,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//Cypress.config('pageLoadTimeout', 100000) Configuration set using Cypress.config is only in scope for the current spec fil\nvar homepage = new _HomePage[\"default\"]();\nvar productpage = new _ProductPage[\"default\"](); //cy.visit('https://rahulshettyacademy.com/angularpractice/')\ncy.visit(Cypress.env('url') + \"/angularpractice/\"); //cy.get('input[name=\"name\"]:nth-child(2)').type(this.data.name)\n//cy.get('select').select(this.data.gender)\n//cy.get(':nth-child(4) > .ng-pristine').should('have.value',this.data.name)\n//cy.get('input[name=\"name\"]:nth-child(2)').should('have.attr','minlength','2')\n//cy.get('#inlineRadio3').should('not.be.enabled')\n// cy.pause()\n//cy.get('li:nth-child(2) a.nav-link').click()\n//Replace locator by page object\nhomepage.getEditBox().type(this.data.name);\nhomepage.getGender().select(this.data.gender);\nhomepage.getTwowayDataBinding().should('have.value', this.data.name);\nhomepage.getEditBox().should('have.attr', 'minlength', '2');\nhomepage.getEntrepreneaur().should('not.be.enabled');\nhomepage.getShopTab().click(); // cy.get('h4.card-title').each(($el, index, $list) => {\n//             const text=$el.text()\n//             if(text.includes(\"Samsung Note 8\"))\n//             {\n//                 cy.get('button.btn.btn-info').eq(index).click()\n//             }\n//         })\n//Able to use customize command in commands.js under support folder\n//cy.SelectProduct('Samsung Note 8')\n//cy.SelectProduct('iphone X')\n//Parametizing test data from json file\nthis.data.productName.forEach(function (element) {\n  cy.SelectProduct(element);\n});\nproductpage.chkOutButton().click();\nvar sum = 0;\ncy.get('tr td:nth-child(4) strong').each(function ($el, index, $list) {\n  var amount = $el.text();\n  var res = amount.split(\" \");\n  res = res[1].trim();\n  sum = Number(sum) + Number(res);\n  cy.log(res);\n}).then(function () {\n  cy.log(sum);\n});\ncy.get('h3 strong').then(function (element) {\n  var amount = element.text();\n  var res = amount.split(\" \");\n  var total = res[1].trim();\n  expect(Number(total)).to.equal(sum);\n});\ncy.get('button.btn.btn-success').click();\ncy.get('#country').type('ind');\ncy.get('.suggestions > :nth-child(1) > li > a').click();\ncy.get('#checkbox2').click({\n  force: true\n});\ncy.contains('Purchase').click(); //cy.get('.alert').should('include.text','Success! Thank you! Your order will be delivered in next few weeks :-).')\ncy.get('.alert').then(function (element) {\n  var actualText = element.text();\n  expect(actualText.includes(\"Success\")).to.be[\"true\"];\n});",
+              "err": {
+                "message": "CypressError: Timed out after waiting `20000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `20000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting `20000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `20000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:155658:13)\n    at https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:156634:16\n    at tryCatcher (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:9956:23)\n    at https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:5078:41\n    at tryCatcher (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:9956:23)\n    at Promise._settlePromiseFromHandler (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:7891:31)\n    at Promise._settlePromise (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:7948:18)\n    at Promise._settlePromise0 (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:7993:10)\n    at Promise._settlePromises (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:8069:18)\n    at _drainQueueStep (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:4663:12)\n    at _drainQueue (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:4656:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:4672:5)\n    at Async.drainQueues (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:4542:14)\nFrom Your Spec Code:\n    at Context.eval (https://rahulshettyacademy.com/__cypress/tests?p=cypress\\integration\\examples\\TestFramework.js:57:8)",
+                "diff": null
+              },
+              "uuid": "18958092-f744-4a71-978a-3f0753e5c209",
+              "parentUUID": "a2c9f5df-56ae-4d95-86d7-d2d1b91610d7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "18958092-f744-4a71-978a-3f0753e5c209"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 29803,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": null,
+      "version": "5.1.0"
+    }
+  }
+}
