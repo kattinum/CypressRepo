@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 0,
+    "passes": 1,
     "pending": 0,
-    "failures": 1,
-    "start": "2020-07-27T07:20:29.137Z",
-    "end": "2020-07-27T07:21:06.451Z",
-    "duration": 37314,
+    "failures": 0,
+    "start": "2020-07-27T07:22:51.074Z",
+    "end": "2020-07-27T07:23:11.877Z",
+    "duration": 20803,
     "testsRegistered": 1,
-    "passPercent": 0,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "b0c6ebfb-da31-4680-86b1-b215b7b07c3a",
+      "uuid": "d1e0bd4e-0b86-4956-89b0-a0e3b330cecb",
       "title": "",
       "fullFile": "cypress\\integration\\examples\\Practices2.js",
       "file": "cypress\\integration\\examples\\Practices2.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "0f5bf800-c3c9-4ff6-ba62-0c5aa721e6cc",
+          "uuid": "04e2d0fc-14b0-4582-b845-ab6e7d459385",
           "title": "My 2nd practice Suite",
           "fullFile": "",
           "file": "",
@@ -38,33 +38,29 @@
               "title": "checkbox practice",
               "fullTitle": "My 2nd practice Suite checkbox practice",
               "timedOut": null,
-              "duration": 24401,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 16119,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "//cy.visit('https://rahulshettyacademy.com/AutomationPractice')\ncy.visit(Cypress.env('url') + \"/AutomationPractice/\"); // .\n//         //checkBox practices more info go to => https://docs.cypress.io/api/commands/check.html#Values\n//         cy.get('#checkBoxOption1').check().should('be.checked').and('have.value','option1')\n//         cy.get('#checkBoxOption1').uncheck().should('not.be.checked')\n//        // cy.get('input[type=\"checkbox\"]').check(['option1', 'option2', 'option3'])\n//         cy.get('input[type=\"checkbox\"]').should('be.visible') // Passes\n//   .check({ force: true }).should('be.checked') \n//     })\n//Static Dropdown\n//       cy.get('select').select('option2').should('have.value','option2')\n//Dynamic Dropdown\n//   cy.get('#autocomplete').type('ind')\n//   cy.get('.ui-menu-item div').each(($el, index, $list) => {\n//     if($el.text()===\"India\")\n//     {\n//         $el.click()\n//     }\n// })\n// cy.get('#autocomplete').should('have.value','India')\n//Handle visible/invisible elements\n// cy.get('#displayed-text').should('be.visible')\n// cy.get('#hide-textbox').click()\n// cy.get('#displayed-text').should('not.be.visible')\n// cy.get('#show-textbox').click()\n// cy.get('#displayed-text').should('be.visible')\n//Handle radio button\n// cy.get('[for=\"radio1\"] > .radioButton').check().should('have.value','radio1')\n// cy.wait(5000)\n// cy.get('[value=\"radio2\"]').check().should('be.checked')\n//cy.get('input[type=\"radio\"]').check(['radio1','radio2','radio3'])\n//alert\n//  cy.get('#alertbtn').click()\n//  cy.get('[value=\"Confirm\"]').click()\n//window:alert\n// cy.on('window:alert',(str) => {\n//     //chai\n//     expect(str).to.equal('Hello , share this practice page and share your knowledge')\n// })\n// cy.on('window:confirm',(str) => {\n//     //chai\n//     expect(str).to.equal('Hello , Are you sure you want to confirm?')\n//})\n//open child webpage in the same window\n// cy.get('#opentab').invoke('removeAttr','target').click()\n// cy.url().should('include','index')\n// cy.wait(2000)\n//go command\n// cy.go('back')\n// cy.url().should('contains','Practice')\n//Web Table\n// cy.get('tr > td:nth-child(2)').each(($el, index, $list) => {\n//         const text=$el.text()\n//         if(text.includes(\"Python\"))\n//         {\n//             cy.get('tr > td:nth-child(2)').eq(index).next().then(function(price)\n//             {\n//                 const priceText = price.text()\n//                 expect(priceText).to.equal('25')\n//             })\n//         }\n//     })\n//Mouse hover\ncy.get('.mouse-hover-content').invoke('show');\ncy.contains('Top').click();\ncy.url().should('include', 'top'); //Click invisible element     \n// cy.contains('Top').click({force:true})\n// cy.url().should('include','top')\n//cypress does not support child webpage that's why we're using removeAttr\n//visit method does not support multiple domain\n// cy.get('#opentab').then(function(el)\n// {\n//     const url=el.prop('href')\n//     cy.log(url)\n//     cy.visit(url)\n// })",
-              "err": {
-                "message": "CypressError: Timed out after waiting `20000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `20000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
-                "estack": "CypressError: Timed out after waiting `20000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `20000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:155658:13)\n    at https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:156634:16\n    at tryCatcher (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:9956:23)\n    at https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:5078:41\n    at tryCatcher (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:9956:23)\n    at Promise._settlePromiseFromHandler (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:7891:31)\n    at Promise._settlePromise (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:7948:18)\n    at Promise._settlePromise0 (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:7993:10)\n    at Promise._settlePromises (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:8069:18)\n    at _drainQueueStep (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:4663:12)\n    at _drainQueue (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:4656:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:4672:5)\n    at Async.drainQueues (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:4542:14)\nFrom Your Spec Code:\n    at Context.eval (https://rahulshettyacademy.com/__cypress/tests?p=cypress\\integration\\examples\\Practices2.js:8:8)",
-                "diff": null
-              },
-              "uuid": "4030cd16-ebf5-48c3-b763-9c8ac4aac4bc",
-              "parentUUID": "0f5bf800-c3c9-4ff6-ba62-0c5aa721e6cc",
+              "err": {},
+              "uuid": "31330bc7-cb4e-4760-ad11-9ed6d9aeab62",
+              "parentUUID": "04e2d0fc-14b0-4582-b845-ab6e7d459385",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [
-            "4030cd16-ebf5-48c3-b763-9c8ac4aac4bc"
+          "passes": [
+            "31330bc7-cb4e-4760-ad11-9ed6d9aeab62"
           ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 24401,
+          "duration": 16119,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
