@@ -8,7 +8,6 @@
     "headTest": "npm run test -- --headed",
     "chromeTest": "npm run test -- --browser chrome --parallel",
     "RecordDashboardTest": "npm run test -- --record --key 83daaedf-f0f3-4c24-bf67-11177c30211f --spec \"cypress/integration/examples/TestFramework.js\" --headed"
-
   },
   "author": "teammy",
   "license": "ISC",
@@ -17,5 +16,8 @@
     "cypress-iframe": "^1.0.1",
     "mocha": "^8.0.1",
     "mochawesome": "^6.1.1"
+  },
+  "dependencies": {
+    "update-electron-app": "^1.5.0"
   }
 }
