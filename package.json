@@ -6,7 +6,8 @@
   "scripts": {
     "test": "node_modules\\.bin\\cypress run",
     "headTest": "npm run test -- --headed",
-    "chromeTest": "npm run test -- --browser chrome --parallel"
+    "chromeTest": "npm run test -- --browser chrome --parallel",
+    "RecordDashboardTest": "npm run test -- --record --key 83daaedf-f0f3-4c24-bf67-11177c30211f --spec \"cypress/integration/examples/TestFramework.js\" --headed"
 
   },
   "author": "teammy",
